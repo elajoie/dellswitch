@@ -1,0 +1,22 @@
+---
+collections:
+  # Used in Dell switch role
+  - name: dellemc.os10
+    source: https://galaxy.ansible.com
+
+  # Used in OCS role
+  - name: kubernetes.core
+    source: https://galaxy.ansible.com
+
+  # Used in the server ops role
+  - name: community.general
+    source: https://galaxy.ansible.com
+
+  # Used in HAproxy role
+  - name: redhat.rhel_system_roles
+    source: https://cloud.redhat.com/api/automation-hub/
+
+  # Used for PXE role
+  - name: ansible.netcommon
+  - name: ansible.posix
+...

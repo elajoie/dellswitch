@@ -1,0 +1,12 @@
+---
+- hosts: all
+  gather_facts: no
+  connection: local
+  vars_files:
+    - vars/vault
+    - vars/main.yml
+
+  roles:
+    - role: dellswitch
+      tags: [ never, dellswitch-facts, network-all ]
+      when: inventory_hostname == "10.16.0.2"

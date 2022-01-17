@@ -1,0 +1,14 @@
+---
+# tasks file for switch
+- dellemc.os10.os10_facts:
+    gather_subset: all
+    provider:
+      host: "10.16.0.2"
+      username: "{{ vault_user }}"
+      password: "{{ vault_pass }}"
+  register: dellswitch
+
+- name: Print the generated password
+  ansible.builtin.debug:
+    var: dellswitch
+...
